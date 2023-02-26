@@ -8,6 +8,7 @@ stage('Build')
 steps
 {
 echo "Building the project"
+bat "mvn clean"
 }
 }
 stage('Test')
@@ -15,13 +16,15 @@ stage('Test')
 steps
 {
 echo "Testing the project"
+bat "mvn test"
 }
 }
-stage('Deploy')
+stage('Compile')
 {
 steps
 {
-echo "Deploying the project"
+echo "Compiling the project"
+bat "mvn compile"
 }
 }
 }
