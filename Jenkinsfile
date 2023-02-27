@@ -1,5 +1,5 @@
 pipeline{
-    agent any{
+    agent any
         stage('One'){
             steps{
                 echo 'Hi this is Declarative pipeline'
@@ -44,4 +44,4 @@ pipeline{
             
         }
     }
-}
+
